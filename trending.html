@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending</title>
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="header-btn">
+          <i class="fa fa-bars mr-2"></i>&nbsp Menu
+        </div>
+        <img src="img/logo.png" class="brand-logo" alt="" />
+        <ul class="nav-links">
+          <li class="nav-items"><a href="index.html">Main Page</a></li>
+          <!-- <li class="nav-items"><a href="#">Contact Us</a></li> -->
+          <li class="nav-items"><a href="#" id="myButton">Contact Us</a></li>
+                  <div id="myPopup" class="popup">
+                      <div class="popup-content">
+                    <h4 class="pop" >Please submit your inquiry using the form below and we will get in touch with you shortly.</h4>
+                    <br>
+                    <textarea  rows="7" cols="50" placeholder="Do you like us or....love Nara.to?" class="ta"  required></textarea>
+                    <br>
+                    <br>
+                    <h4 class="pop">Email</h4>
+                    <small class="small">Only if you want to hear more from us.</small>
+                    <br>
+                    <br>
+                    <input class="email" type="text" name="name" placeholder="Enter your email" required/>
+                    <div class="btn-block">
+                      <br>
+                      <button id="closePopup">
+                        Submit
+                      </button>
+                      </div>
+                  </div>
+                  </div>
+                  <script>
+                      myButton.addEventListener("click", function () {
+                          myPopup.classList.add("show");
+                      });
+                      closePopup.addEventListener("click", function () {
+                          myPopup.classList.remove("show");
+                      });
+                      window.addEventListener("click", function (event) {
+                          if (event.target == myPopup) {
+                              myPopup.classList.remove("show");
+                          }
+                      });
+                  </script>
+        </ul>
+        <div class="right-container">
+          <input type="text" class="search-box" placeholder="search" />
+          <!-- <button class="sub-btn">subscribe</button> -->
+  <div class="icon"><i class="bi bi-search"></i></div>
+          <a href="login.html" class="login-link">login</a>
+        </div>
+      </nav>
+      <div class="animated_share"> 
+        <div class="animated_share_btn">
+          <a href="https://www.facebook.com/narayan.panchal.904?mibextid=ZbWKwL" target="_blank"><i class="fa fa-facebook">&nbsp; Narayan</i></a>
+          <a href="https://instagram.com/narayan103?igshid=NGExMmI2YTkyZg==" target="_blank"><i class="fa fa-instagram">&nbsp; narayan103</i></a>
+          <a href="https://www.linkedin.com/in/narayan-panchal-808630235" target="_blank"><i class="fa fa-linkedin">&nbsp; narayan103</i></a>
+        </div>
+    </div>
+    <div>
+        <select name="" id="genre">
+            <option value="SG">Select genre</option>
+            <option value="SG">Action</option>
+            <option value="SG">Comedy</option>
+            <option value="SG">Fantasy</option>
+            <option value="SG">Horror</option>
+            <option value="SG">Kids</option>
+        </select>
+        <select name="" id="genre">
+            <option value="SG">Select country</option>
+            <option value="SG">India</option>
+            <option value="SG">China</option>
+        </select>
+        <select name="" id="genre">
+            <option value="SG">Select type</option>
+            <option value="SG">Movie</option>
+            <option value="SG">TV</option>
+            <option value="SG">Special</option>
+            <option value="SG">Music</option>
+        </select>
+        <select name="" id="genre">
+            <option value="SG">Select Language</option>
+            <option value="SG">Sub & Dub</option>
+            <option value="SG">Sub</option>
+            <option value="SG">Dub</option>
+        </select>
+        <select name="" id="genre">
+            <option value="SG">Select rating</option>
+            <option value="SG">&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</option>
+            <option value="SG">&bigstar;&bigstar;&bigstar;&bigstar;</option>
+            <option value="SG">&bigstar;&bigstar;&bigstar;</option>
+            <option value="SG">&bigstar;&bigstar;</option>
+            <option value="SG">&bigstar;</option>
+        </select>
+        <select name="" id="genre">
+            <option value="SG" >Recently updated</option>
+            <option value="SG">Recently added</option>
+            <option value="SG">Release date</option>
+        </select>
+    </div>
+    <h1 class="title">Trending: Action</h1>
+    <div class="movies-list">
+      <button class="pre-btn" title="btn">
+        <img src="img/pre.png" alt="" />
+      </button>
+      <button class="nxt-btn" title="btn">
+        <img src="img/nxt.png" alt="" />
+      </button>
+      <div class="card-container">
+        <div class="card">
+          <img src="img/poster 1" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Tokyo Revengers: Tenjiku-hen</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+            <img src="img/poster 2.jpg" class="card-img" alt="" />
+            <div class="card-body">
+              <h2 class="name">Solo Leveling</h2>
+              <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+              <button class="watchlist-btn">add to watchlist</button>
+            </div>
+          </div>
+          <div class="card">
+              <img src="img/poster 3.jpg" class="card-img" alt="" />
+              <div class="card-body">
+                <h2 class="name">Tsukimichi -Moonlit Fantasy- S 2</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+              </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 4.jpg" class="card-img" alt="" />
+                <div class="card-body">
+                  <h2 class="name">4 Cut Hero</h2>
+                  <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                  <button class="watchlist-btn">add to watchlist</button>
+                </div>
+              </div>
+              <div class="card">
+                  <img src="img/poster 5.jpg" class="card-img" alt="" />
+                  <div class="card-body">
+                    <h2 class="name">Sousou no Frieren</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                  </div>
+                </div>
+                <div class="card">
+                    <img src="img/poster 6.jpg" class="card-img" alt="" />
+                    <div class="card-body">
+                      <h2 class="name">The First Order</h2>
+                      <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                      <button class="watchlist-btn">add to watchlist</button>
+                    </div>
+                  </div>
+                  <div class="card">
+                      <img src="img/poster 7.jpg" class="card-img" alt="" />
+                      <div class="card-body">
+                        <h2 class="name">Spy Classroom Season 2</h2>
+                        <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                        <button class="watchlist-btn">add to watchlist</button>
+                      </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/poster 8.jpg" class="card-img" alt="" />
+                        <div class="card-body">
+                          <h2 class="name">The Land of Miracles 3rd Season</h2>
+                          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                          <button class="watchlist-btn">add to watchlist</button>
+                        </div>
+                      </div>
+                      <div class="card">
+                          <img src="img/poster 9.jpg" class="card-img" alt="" />
+                          <div class="card-body">
+                            <h2 class="name">LINK CLICK Season 2</h2>
+                            <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                            <button class="watchlist-btn">add to watchlist</button>
+                          </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/poster 10.jpg" class="card-img" alt="" />
+                            <div class="card-body">
+                              <h2 class="name">Saint Cecilia & Pastor Lawrence</h2>
+                              <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                              <button class="watchlist-btn">add to watchlist</button>
+                            </div>
+                          </div>
+                          <div class="card">
+                              <img src="img/poster 11.jpg" class="card-img" alt="" />
+                              <div class="card-body">
+                                <h2 class="name">Monster Diner</h2>
+                                <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                                <button class="watchlist-btn">add to watchlist</button>
+                              </div>
+                            </div>
+                            <div class="card">
+                                <img src="img/poster 12.jpg" class="card-img" alt="" />
+                                <div class="card-body">
+                                  <h2 class="name">The Devil is a Part-Timer!! Season 2</h2>
+                                  <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                                  <button class="watchlist-btn">add to watchlist</button>
+                                </div>
+                              </div>
+      </div>
+    </div>
+    <h1 class="title">Trending: Romance</h1>
+    <div class="movies-list">
+        <button class="pre-btn" title="btn"><img src="img/pre.png" alt=""></button>
+        <button class="nxt-btn" title="btn"><img src="img/nxt.png" alt=""></button>
+        <div class="card-container">
+            <div class="card">
+                <img src="img/poster 12.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">The Devil Is A Part-Timer!! Season 2</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 11.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">Monster Diner</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 10.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">Saint Cecilia & Pastor Lawrence</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 9.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">LINK CLICK Season 2</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 8.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">The Land Of Miracles 3rd Season</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 7.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">Spy Classroom Season 2</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 6.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">The First Order</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 5.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">Sousou No Frieren</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 4.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">4 Cut Hero</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 3.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">Tsukimichi -Moonlit Fantasy- S 2</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 2.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">Solo Leveling</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 1" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">Tokyo Revengers: Tenjiku-Hen
+
+                    </h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+        </div>
+   </div>
+   <div class=""> 
+    <p class="copyright">©2021 Nara. All rights reserved.</p>
+</div>
+<script src="trending.js"></script>
+</body>
+</html>

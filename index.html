@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nara.to</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    #timer {
+      font-size: 15px;
+      color: #cbe963;
+      border: 3px solid #cbe963;
+      border-radius: 10%; /* Make the timer container circular */
+      /* padding: 20px; */
+      margin-left: 65%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* margin-right: 10px; */
+      min-width: 107px; /* Set the width to make the container circular */
+      min-height: 50px; /* Set the height to make the container circular */
+      /* line-height: 50px; Vertically center the timer text */
+    }
+  </style>
+</head>
+<body>
+  
+
+    <img class="bgImage" src="img/back zoro.jpg">
+    <div class="top-gradient"></div>
+    <div class="container">
+        <nav>
+            <div class="header-btn">
+            <a href="index.html"><i class="fa fa-bars mr-2"></i>&nbsp Menu</a>
+            </div>
+            <div class="menu">
+                <li><a href="zoro.html" class="main">Home</a></li>
+                <li><a href="trending.html" class="main">Trending</a></li>
+                <!-- <li><a href="#" class="main">Contact Us</a></li> -->
+                <li><a href="#" id="myButton">Contact Us</a></li>
+                <div id="myPopup" class="popup">
+                    <div class="popup-content">
+                  <h4 class="pop" >Please submit your inquiry using the form below and we will get in touch with you shortly.</h4>
+                  <br>
+                  <textarea  rows="7" cols="50" placeholder="Do you like us or....love Nara.to?" class="ta"  required></textarea>
+                  <br>
+                  <br>
+                  <h4 class="pop">Email</h4>
+                  <small class="small">Only if you want to hear more from us.</small>
+                  <br>
+                  <br>
+                  <input class="email" type="text" name="name" placeholder="Enter your email" required/>
+                  <div class="btn-block">
+                    <br>
+                    <button id="closePopup">
+                      Submit
+                    </button>
+                    </div>
+                </div>
+            
+                <script>
+                    myButton.addEventListener("click", function () {
+                        myPopup.classList.add("show");
+                    });
+                    closePopup.addEventListener("click", function () {
+                        myPopup.classList.remove("show");
+                    });
+                    window.addEventListener("click", function (event) {
+                        if (event.target == myPopup) {
+                            myPopup.classList.remove("show");
+                        }
+                    });
+                </script>
+            </div>
+            
+  <div id="timer">00:00:00</div>
+  <script>
+    // Function to start the timer and close the page when the timer is at 0
+    function startTimer(duration, display) {
+      var timer = duration, minutes, seconds;
+      var intervalId = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          // Close the page when the timer is at 0
+          clearInterval(intervalId); // Clear the interval to stop the timer
+          window.close(); // Close the page
+        }
+      }, 1000);
+    }
+
+    // Set the duration (in seconds) for the timer
+    var timerDuration = 3000; // 5 minutes in this example
+
+    // Get the div where the timer will be displayed
+    var display = document.getElementById("timer");
+
+    // Start the timer
+    startTimer(timerDuration, display);
+  </script>
+        </nav>
+        <main>
+            <div class="left">
+                <div class="left-content">
+                    <img class="logo" src="img/logo.png" >
+                    <div class="search">
+                    <input class="searchBar" type="text" placeholder="Search Anime...">
+                    <div class="icon"><i class="bi bi-search"></i></div>
+                    </div>
+                    <div class="link">
+                Top search: 
+                <a href="https://en.wikipedia.org/wiki/One_Piece">ONE PIECE</a>,
+                <a href="https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba">Demon Slayer</a>,
+                <a href="https://en.wikipedia.org/wiki/Jujutsu_Kaisen">Jujutsu Kaisen </a>,
+                <a href="https://en.wikipedia.org/wiki/Naruto">Naruto </a>
+            </div>
+                </div>
+            </div>
+            <div class="zoro">
+                <img class="zoro" src="img/back_zoro1.2.png">
+            </div>
+        </div>
+        <div class="container2">
+        </main>
+        <div class="viewSite">
+            <a class="hi" href="zoro.html">View Full Site</a>
+            <i class="bi bi-arrow-right-circle"></i>
+        </div>
+        <!-- <div class="shareZoro">
+            <p>Share Zoro</p>
+            <p>to your friends</p>
+        </div> -->
+        <div class="animated_share"> 
+            <div class="animated_share_btn">
+                <a href="https://www.facebook.com/narayan.panchal.904?mibextid=ZbWKwL" target="_blank"><i class="fa fa-facebook">&nbsp; Narayan</i></a>
+                <a href="https://instagram.com/narayan103?igshid=NGExMmI2YTkyZg==" target="_blank"><i class="fa fa-instagram">&nbsp; narayan103</i></a>
+                <a href="https://www.linkedin.com/in/narayan-panchal-808630235" target="_blank"><i class="fa fa-linkedin">&nbsp; narayan103</i></a>
+              </div>
+        </div>
+        <div class="discription">
+            <div class="discriptionL">
+                <h2>Nara.to - The best site to watch anime online for Free</h2>
+                    <p>Do you know that according to Google, the monthly search volume for anime related topics is up to over 1 Billion times? Anime is famous worldwide and it is no wonder we've seen a sharp rise in the number of free anime streaming sites.</p><p>Just like free online movie streaming sites, anime watching sites are not created equally, some are better than the rest, so we've decided to build Nara.to to be one of the best free anime streaming site for all anime fans on the world.</p>
+                    <h2>1 ] What is Nara.to?</h2>
+                    <p>Nara.to is a free site to watch anime and you can even download subbed or dubbed anime in ultra HD quality without any registration or payment. By having No Ads in all kinds, we are trying to make it the safest site for free anime.</p>
+                    <h2>2 ] Is Nara.to safe?</h2>
+                    <p>Yes we are, we do have only one Ads to cover the server cost and we keep scanning the ads 24/7 to make sure all are clean, If you find any ads that is suspicious, please forward us the info and we will remove it.</p>
+                    <p>Thank You</p>
+
+            </div>
+            <div class="discriptionR">
+                <h2>Trending Posts</h2>
+                <div class="drblock"> <!--drblock = discription right blocks-->
+                    <h3>ONE PIECE</h3>
+                    <p>It’s been 18 years since Luffy surprised us all with Gear 2, his first major power-up. To give you an idea, it was back in the Enies Lobby arc, in October 2005, when we were in chapter 387 of the manga (in the anime, it would happen a year later, in episode 272, which aired in 2006). From there to Gear 3, also called Gia sado, it was only a few months. Nine years passed between Gear 3 and Gear 4, but it was worth the wait. We will never forget the moment when Eiichiro Oda pulled it out of his sleeve during the battle with Doflamingo, easily one of the best battles in the series. And now, another eight years later, we are witnessing another historic moment for One Piece, maybe the last, as we are in the final phase of the series?</p>
+                    <i class=""></i>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

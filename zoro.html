@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nara.to</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="header-btn">
+        <i class="fa fa-bars mr-2"></i>&nbsp Menu
+      </div>
+      <img src="img/logo.png" class="brand-logo" alt="" />
+      <ul class="nav-links">
+        <li class="nav-items"><a href="index.html">Main Page</a></li>
+        <li class="nav-items"><a href="trending.html">Trending</a></li>
+        <!-- <li class="nav-items"><a href="#">Contact Us</a></li> -->
+        <li class="nav-items"><a href="#" id="myButton">Contact Us</a></li>
+                <div id="myPopup" class="popup">
+                    <div class="popup-content">
+                  <h4 class="pop" >Please submit your inquiry using the form below and we will get in touch with you shortly.</h4>
+                  <br>
+                  <textarea  rows="7" cols="50" placeholder="Do you like us or....love Nara.to?" class="ta"  required></textarea>
+                  <br>
+                  <br>
+                  <h4 class="pop">Email</h4>
+                  <small class="small">Only if you want to hear more from us.</small>
+                  <br>
+                  <br>
+                  <input class="email" type="text" name="name" placeholder="Enter your email" required/>
+                  <div class="btn-block">
+                    <br>
+                    <button id="closePopup">
+                      Submit
+                    </button>
+                    </div>
+                </div>
+            
+                <script>
+                    myButton.addEventListener("click", function () {
+                        myPopup.classList.add("show");
+                    });
+                    closePopup.addEventListener("click", function () {
+                        myPopup.classList.remove("show");
+                    });
+                    window.addEventListener("click", function (event) {
+                        if (event.target == myPopup) {
+                            myPopup.classList.remove("show");
+                        }
+                    });
+                </script>
+      </ul>
+
+      <div class="right-container">
+        <input type="text" class="search-box" placeholder="search" />
+        <!-- <button class="sub-btn">subscribe</button> -->
+<div class="icon"><i class="bi bi-search"></i></div>
+        <a href="login.html" class="login-link">login</a>
+      </div>
+      <div id="timer">00:00:00</div>
+  <script>
+    function startTimer(duration, display) {
+      var timer = duration, minutes, seconds;
+      var intervalId = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          clearInterval(intervalId); 
+          window.close(); 
+        }
+      }, 1000);
+    }
+    var timerDuration = 6000;
+    var display = document.getElementById("timer");
+
+    startTimer(timerDuration, display);
+  </script>
+    </nav>
+
+    <div class="carousel-container">
+      <div class="carousel">
+        <!-- <div class="slider">
+                <div class="slide-content">
+                    <h1 class="movie-title">loki</h1>
+                    <p class="movie-des">Lorem ipsum dolor sit,amet consectetur
+                    adipisicing elit.Suscipit saepe eius ratione nostrum mollitia
+                    explicabo quae nam pariatur.Sint,odit?</p>
+                </div>
+                <img src="img/slider 1.jpg" alt="">
+            </div> -->
+      </div>
+    </div>
+    <p class="most">Most Viewed</p>
+    <div class="video-card-container">
+      <div class="video-card">
+        <img src="img/one.jpg" class="video-card-image" alt="" />
+        <video src="videos/onevideo.mp4" muted loop class="card-video"></video>
+      </div>
+      <div class="video-card">
+        <img src="img/Jujutsu.webp" class="video-card-image" alt="" />
+        <video src="videos/jujutsuvideo.mp4" muted loop class="card-video"></video>
+      </div>
+      <div class="video-card">
+        <img src="img/Demon.webp" class="video-card-image" alt="" />
+        <video src="videos/demonslayervideo.mp4" muted loop class="card-video"></video>
+      </div>
+      <div class="video-card">
+        <img src="img/killingtime.webp" class="video-card-image" alt="" />
+        <video src="videos/TONARIvideo.mp4" muted loop class="card-video"></video>
+      </div>
+      <div class="video-card">
+        <img src="img/sodapop.png" class="video-card-image" alt="" />
+        <video
+          src="videos/Wordscideo.mp4"
+          muted
+          loop
+          class="card-video"
+        ></video>
+      </div>
+    </div>
+    <h1 class="title">New Release</h1>
+    <div class="movies-list">
+      <button class="pre-btn" title="btn">
+        <img src="img/pre.png" alt="" />
+      </button>
+      <button class="nxt-btn" title="btn">
+        <img src="img/nxt.png" alt="" />
+      </button>
+      <div class="card-container">
+        <div class="card">
+          <img src="img/poster 1" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Tokyo Revengers: Tenjiku-hen</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+            <img src="img/poster 2.jpg" class="card-img" alt="" />
+            <div class="card-body">
+              <h2 class="name">Solo Leveling</h2>
+              <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+              <button class="watchlist-btn">add to watchlist</button>
+            </div>
+          </div>
+          <div class="card">
+              <img src="img/poster 3.jpg" class="card-img" alt="" />
+              <div class="card-body">
+                <h2 class="name">Tsukimichi -Moonlit Fantasy- S 2</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+              </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 4.jpg" class="card-img" alt="" />
+                <div class="card-body">
+                  <h2 class="name">4 Cut Hero</h2>
+                  <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                  <button class="watchlist-btn">add to watchlist</button>
+                </div>
+              </div>
+              <div class="card">
+                  <img src="img/poster 5.jpg" class="card-img" alt="" />
+                  <div class="card-body">
+                    <h2 class="name">Sousou no Frieren</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                  </div>
+                </div>
+                <div class="card">
+                    <img src="img/poster 6.jpg" class="card-img" alt="" />
+                    <div class="card-body">
+                      <h2 class="name">The First Order</h2>
+                      <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                      <button class="watchlist-btn">add to watchlist</button>
+                    </div>
+                  </div>
+                  <div class="card">
+                      <img src="img/poster 7.jpg" class="card-img" alt="" />
+                      <div class="card-body">
+                        <h2 class="name">Spy Classroom Season 2</h2>
+                        <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                        <button class="watchlist-btn">add to watchlist</button>
+                      </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/poster 8.jpg" class="card-img" alt="" />
+                        <div class="card-body">
+                          <h2 class="name">The Land of Miracles 3rd Season</h2>
+                          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                          <button class="watchlist-btn">add to watchlist</button>
+                        </div>
+                      </div>
+                      <div class="card">
+                          <img src="img/poster 9.jpg" class="card-img" alt="" />
+                          <div class="card-body">
+                            <h2 class="name">LINK CLICK Season 2</h2>
+                            <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                            <button class="watchlist-btn">add to watchlist</button>
+                          </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/poster 10.jpg" class="card-img" alt="" />
+                            <div class="card-body">
+                              <h2 class="name">Saint Cecilia & Pastor Lawrence</h2>
+                              <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                              <button class="watchlist-btn">add to watchlist</button>
+                            </div>
+                          </div>
+                          <div class="card">
+                              <img src="img/poster 11.jpg" class="card-img" alt="" />
+                              <div class="card-body">
+                                <h2 class="name">Monster Diner</h2>
+                                <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                                <button class="watchlist-btn">add to watchlist</button>
+                              </div>
+                            </div>
+                            <div class="card">
+                                <img src="img/poster 12.jpg" class="card-img" alt="" />
+                                <div class="card-body">
+                                  <h2 class="name">The Devil is a Part-Timer!! Season 2</h2>
+                                  <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                                  <button class="watchlist-btn">add to watchlist</button>
+                                </div>
+                              </div>
+      </div>
+    </div>
+    <h1 class="title">Completed Series</h1>
+    <div class="movies-list">
+        <button class="pre-btn" title="btn"><img src="img/pre.png" alt=""></button>
+        <button class="nxt-btn" title="btn"><img src="img/nxt.png" alt=""></button>
+        <div class="card-container">
+            <div class="card">
+                <img src="img/poster 12.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">The Devil Is A Part-Timer!! Season 2</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 11.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">Monster Diner</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 10.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">Saint Cecilia & Pastor Lawrence</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 9.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">LINK CLICK Season 2</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 8.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">The Land Of Miracles 3rd Season</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 7.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">Spy Classroom Season 2</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 6.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">The First Order</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 5.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">Sousou No Frieren</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 4.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">4 Cut Hero</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 3.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">Tsukimichi -Moonlit Fantasy- S 2</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 2.jpg" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">Solo Leveling</h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/poster 1" class="card-img" alt="">
+                <div class="card-body">
+                    <h2 class="name">Tokyo Revengers: Tenjiku-Hen
+
+                    </h2>
+                    <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+                    <button class="watchlist-btn">add to watchlist</button>
+                </div>
+            </div>
+        </div>
+   </div>
+   <div class=""> 
+    <p class="copyright">©2021 Nara. All rights reserved.</p>
+</div>
+    <script src="index.js" async></script>
+  </body>
+</html>
